@@ -1,0 +1,22 @@
+{
+  "name": "nrdboiler",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "NRD's npm package to create boilerplate archives",
+  "main": "index.js",
+  "bin": {
+    "default": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nrd",
+    "boilerplate",
+    "front-end",
+    "javascript",
+    "html"
+  ],
+  "author": "github/lnardon",
+  "license": "ISC"
+}
