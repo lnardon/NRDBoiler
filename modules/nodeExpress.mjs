@@ -13,10 +13,11 @@ const port = 8888
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-
+  res.send("Hello world!")
 })
 
-app.listen(process.env.PORT || port)
+app.listen(process.env.PORT || port});
+
 `;
 
   const packageContent = `
@@ -25,7 +26,7 @@ app.listen(process.env.PORT || port)
   "version": "1.0.0",
   "description": "NRDBoiler node express template",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \'Error: no test specified\' && exit 1"
   },
   "keywords": [
@@ -36,7 +37,8 @@ app.listen(process.env.PORT || port)
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
 
@@ -54,7 +56,7 @@ app.listen(process.env.PORT || port)
     if (err) throw err;
   });
 
-  exec("cd ./dd && npm install", (err, stdout, stderr) => {
+  exec("cd ./dd && npm install && npm start", (err, stdout, stderr) => {
     if (err) {
       console.error(err, stdout, stderr);
     }
