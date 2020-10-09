@@ -1,6 +1,6 @@
 # NRDBoiler
 
-NRDBoiler is a package to create projects using boilerplate code from the terminal with easy and ready-to-use project templates.
+NRDBoiler is a CLI-Tool to create boilerplate files for various projects. All boilerplate projects can be found in the Package Template section.
 
 [![NPM](https://img.shields.io/npm/v/nrdboiler.svg)](https://www.npmjs.com/package/nrdboiler) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -14,6 +14,12 @@ npm install -g nrdboiler
 
 ```bash
 npx nrdboiler <PackageTemplate> <YourProjectName>
+```
+
+## Example
+
+```bash
+npx nrdboiler node-express test
 ```
 
 ## Package Template
