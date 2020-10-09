@@ -4,8 +4,7 @@ const require = createRequire(import.meta.url);
 const { exec } = require("child_process");
 
 export default function nodeExpress(folderName) {
-  const nodeContent = `
-const express = require('express')
+  const nodeContent = `const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 8888
@@ -22,7 +21,7 @@ app.listen(process.env.PORT || port});
 
   const packageContent = `
 {
-  "name": "${folderName.toLowerCase()}",
+  "name": "${folderName.toLowerCase()}", 
   "version": "1.0.0",
   "description": "NRDBoiler node express template",
   "scripts": {
@@ -56,9 +55,12 @@ app.listen(process.env.PORT || port});
     if (err) throw err;
   });
 
-  exec("cd ./dd && npm install && npm start", (err, stdout, stderr) => {
-    if (err) {
-      console.error(err, stdout, stderr);
+  exec(
+    `cd ./${folderName}  && npm install && npm start`,
+    (err, stdout, stderr) => {
+      if (err) {
+        console.error(err, stdout, stderr);
+      }
     }
-  });
+  );
 }
