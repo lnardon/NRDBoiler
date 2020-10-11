@@ -36,6 +36,10 @@ Template for a basic node server with express
 
 Template Stack with an basic HTML, Javascript and Sass file
 
+### react-component
+
+Template to create a React Functional Component
+
 </br>
 
 ## License
