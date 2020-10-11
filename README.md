@@ -32,6 +32,10 @@ Template Stack with an basic HTML, Javascript and CSS file
 
 Template for a basic node server with express
 
+### web-sass
+
+Template Stack with an basic HTML, Javascript and Sass file
+
 </br>
 
 ## License
