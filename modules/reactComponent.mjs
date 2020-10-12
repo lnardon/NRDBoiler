@@ -26,4 +26,6 @@ export default function ${folderName}({}){
   fs.writeFile(`./${folderName}/${folderName}.css`, "", (err) => {
     if (err) throw err;
   });
+
+  console.log("Component Structure Created!");
 }

@@ -14,8 +14,7 @@ export default function reactComponent(folderName) {
       if (err) {
         console.error(err, stdout, stderr);
       }
+      console.log("Project Created and dependencies installed!");
     }
   );
-
-  console.log("Project Created and dependencies installed!");
 }

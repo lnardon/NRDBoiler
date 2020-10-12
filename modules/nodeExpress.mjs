@@ -61,6 +61,7 @@ app.listen(process.env.PORT || port});
       if (err) {
         console.error(err, stdout, stderr);
       }
+      console.log("Project Created and dependencies installed!");
     }
   );
 }
