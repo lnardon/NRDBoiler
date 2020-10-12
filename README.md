@@ -44,6 +44,10 @@ Template to create a React Functional Component
 
 Template to create a React Basic Project with routes already configured
 
+### react-redux
+
+Template to create a React Project with routes, redux and css transitions already configured
+
 </br>
 
 ## License
