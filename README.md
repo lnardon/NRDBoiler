@@ -40,6 +40,10 @@ Template Stack with an basic HTML, Javascript and Sass file
 
 Template to create a React Functional Component
 
+### react-basic
+
+Template to create a React Basic Project with routes already configured
+
 </br>
 
 ## License
