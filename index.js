@@ -6,6 +6,7 @@ import reactComponent from "./modules/reactComponent.mjs";
 import reactBasic from "./modules/reactBasic.mjs";
 import reactRedux from "./modules/reactRedux.mjs";
 import nextComponent from "./modules/nextComponent.mjs";
+import nextSSGComponent from "./modules/nextSSGComponent.mjs";
 
 switch (process.argv.slice(2)[0]) {
   case "vanilla-web":
@@ -28,6 +29,9 @@ switch (process.argv.slice(2)[0]) {
     break;
   case "next-component":
     nextComponent(process.argv.slice(2)[1]);
+    break;
+  case "next-ssg-component":
+    nextSSGComponent(process.argv.slice(2)[1]);
     break;
   default:
     console.error("Sorry, boilerplate not found");
