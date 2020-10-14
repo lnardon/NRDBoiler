@@ -5,6 +5,7 @@ import webSass from "./modules/webSass.mjs";
 import reactComponent from "./modules/reactComponent.mjs";
 import reactBasic from "./modules/reactBasic.mjs";
 import reactRedux from "./modules/reactRedux.mjs";
+import nextComponent from "./modules/nextComponent.mjs";
 
 switch (process.argv.slice(2)[0]) {
   case "vanilla-web":
@@ -24,6 +25,9 @@ switch (process.argv.slice(2)[0]) {
     break;
   case "react-component":
     reactComponent(process.argv.slice(2)[1]);
+    break;
+  case "next-component":
+    nextComponent(process.argv.slice(2)[1]);
     break;
   default:
     console.error("Sorry, boilerplate not found");

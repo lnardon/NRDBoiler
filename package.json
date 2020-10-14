@@ -2,7 +2,7 @@
   "name": "nrdboiler",
   "version": "1.4.0",
   "type": "module",
-  "description": "NRD's npm package to create boilerplate archives",
+  "description": "NRD's npm package to create boilerplate projects",
   "main": "index.js",
   "bin": {
     "default": "index.js"
