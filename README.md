@@ -48,6 +48,14 @@ Template to create a React Basic Project with routes already configured
 
 Template to create a React Project with routes, redux and css transitions already configured
 
+### next-component
+
+Template to create a Next.js Basic Functional Component
+
+### next-ssg-component
+
+Template to create a Next.js Functional Component with Server Side Generation functions
+
 </br>
 
 ## License
