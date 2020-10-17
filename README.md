@@ -56,6 +56,10 @@ Template to create a Next.js Basic Functional Component
 
 Template to create a Next.js Functional Component with Server Side Generation functions
 
+### react-electron
+
+Template to create an Electron App with React.js
+
 </br>
 
 ## License
