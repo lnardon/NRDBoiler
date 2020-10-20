@@ -21,7 +21,7 @@ export default function ${folderName}({}){
     if (err) throw err;
   });
 
-  fs.writeFile(`./${folderName}/${folderName}.css`, "", (err) => {
+  fs.writeFile(`./${folderName}/${folderName}.module.css`, "", (err) => {
     if (err) throw err;
   });
 
