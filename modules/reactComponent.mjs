@@ -4,11 +4,11 @@ export default function reactComponent(folderName) {
   const reactContent = `
 import React, {useState, useEffect} from 'react';
 
-import "${folderName}.css"
+import styles from "./styles.module.css"
 
 export default function ${folderName}({}){
   return (
-    <div>
+    <div className={styles.container}>
     
     </div>
   )
@@ -23,7 +23,7 @@ export default function ${folderName}({}){
     if (err) throw err;
   });
 
-  fs.writeFile(`./${folderName}/${folderName}.css`, "", (err) => {
+  fs.writeFile(`./${folderName}/styles.module.css`, "", (err) => {
     if (err) throw err;
   });
 

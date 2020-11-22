@@ -1,6 +1,6 @@
 {
   "name": "nrdboiler",
-  "version": "1.6.0",
+  "version": "1.8.0",
   "type": "module",
   "description": "NRD's npm package to create boilerplate projects",
   "main": "index.js",
@@ -15,7 +15,10 @@
     "boilerplate",
     "front-end",
     "javascript",
-    "html"
+    "html",
+    "next",
+    "typescript",
+    "electron"
   ],
   "author": "github/lnardon",
   "license": "ISC"

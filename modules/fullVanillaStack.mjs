@@ -22,6 +22,11 @@ export default function fullVanillaStack(folderName) {
   `;
 
   const cssContent = `
+  * {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
     html {
       width: 100vw;
       height: 100vh;
