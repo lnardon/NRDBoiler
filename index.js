@@ -9,6 +9,7 @@ import nextComponent from "./modules/nextComponent.mjs";
 import nextSSGComponent from "./modules/nextSSGComponent.mjs";
 import reactElectron from "./modules/reactElectron.mjs";
 import typescriptModule from "./modules/typescriptModule.mjs";
+import vanillaThreejs from "./modules/vanillaThreejs.mjs";
 
 switch (process.argv.slice(2)[0]) {
   case "vanilla-web":
@@ -40,6 +41,9 @@ switch (process.argv.slice(2)[0]) {
     break;
   case "typescript-module":
     typescriptModule(process.argv.slice(2)[1]);
+    break;
+  case "vanilla-threejs":
+    vanillaThreejs(process.argv.slice(2)[1]);
     break;
   default:
     console.error("Sorry, boilerplate not found");

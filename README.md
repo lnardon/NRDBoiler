@@ -60,6 +60,10 @@ Template to create a Next.js Functional Component with Server Side Generation fu
 
 Template to create an Electron App with React.js
 
+### vanilla-threejs
+
+Template to create a website using Three.js, HTML, JS and CSS
+
 </br>
 
 ## License
