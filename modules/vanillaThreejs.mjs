@@ -14,9 +14,8 @@ export default function fullVanillaStack(folderName) {
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
-    <script defer src="./index.js"></script>
-    <title>test</title>
+    <script type="module" defer src="./index.js"></script>
+    <title>${folderName}</title>
   </head>
   <body>
     <canvas id="canvas"></canvas>
@@ -31,10 +30,8 @@ export default function fullVanillaStack(folderName) {
 }
 html {
   width: 100vw;
+  height: 100%;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -44,7 +41,15 @@ body {
 }
 `;
 
-  const jsContent = `//RENDERER
+  const jsContent = `// IMPORTS
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js";
+import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/loaders/GLTFLoader.js";
+
+//SCENE
+const scene = new THREE.Scene();
+
+//RENDERER
 const renderer = new THREE.WebGLRenderer({
   canvas: document.getElementById("canvas"),
   antialias: true,
@@ -61,9 +66,6 @@ const camera = new THREE.PerspectiveCamera(
   3000
 );
 
-//SCENE
-const scene = new THREE.Scene();
-
 //LIGHTS
 const light1 = new THREE.AmbientLight(0xffffff, 0.5),
   light2 = new THREE.PointLight(0xffffff, 1);
@@ -75,9 +77,6 @@ scene.add(light2);
 const geometry = new THREE.CubeGeometry(100, 100, 100);
 const material = new THREE.MeshLambertMaterial({ color: 0xf3ffe2 });
 const mesh = new THREE.Mesh(geometry, material);
-
-mesh.position.set(0, 0, -1000); //set the view position backwards in space so we can see it
-scene.add(mesh);
 
 //RENDER LOOP
 requestAnimationFrame(render);
