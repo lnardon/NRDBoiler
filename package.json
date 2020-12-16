@@ -1,6 +1,6 @@
 {
   "name": "nrdboiler",
-  "version": "1.9.0",
+  "version": "1.11.0",
   "type": "module",
   "description": "NRD's npm package to create boilerplate projects",
   "main": "index.js",

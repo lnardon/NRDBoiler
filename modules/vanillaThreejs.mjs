@@ -54,21 +54,31 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.getElementById("canvas"),
   antialias: true,
 });
-renderer.setClearColor(0x25c8ce);
+renderer.setClearColor(0x070707);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 //CAMERA
 const camera = new THREE.PerspectiveCamera(
-  35,
+  70,
   window.innerWidth / window.innerHeight,
   0.1,
   3000
 );
+camera.position.z = 100;
+window.addEventListener(
+  "resize",
+  function () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  },
+  false
+);
 
 //LIGHTS
-const light1 = new THREE.AmbientLight(0xffffff, 0.5),
-  light2 = new THREE.PointLight(0xffffff, 1);
+const light1 = new THREE.AmbientLight(0xffffff, 0.5)
+const light2 = new THREE.PointLight(0xffffff, 1);
 
 scene.add(light1);
 scene.add(light2);
@@ -80,7 +90,6 @@ const mesh = new THREE.Mesh(geometry, material);
 
 //RENDER LOOP
 requestAnimationFrame(render);
-
 function render() {
   mesh.rotation.x += 0.01;
   mesh.rotation.y += 0.03;
@@ -88,15 +97,7 @@ function render() {
   requestAnimationFrame(render);
 }
 
-window.addEventListener(
-  "resize",
-  function () {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  },
-  false
-);
+
 `;
 
   console.log("Creating files...");
