@@ -64,6 +64,10 @@ Template to create an Electron App with React.js
 
 Template to create a website using Three.js, HTML, JS and CSS
 
+### typescript-module
+
+Template to create a Typescript NPM/YARN module
+
 </br>
 
 ## License
