@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export default function vanillaThreejs(folderName) {
+export default function reactThreejs(folderName) {
   const htmlContent = `<!DOCTYPE html>
 <html lang="en">
   <head>
